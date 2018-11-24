@@ -1,0 +1,27 @@
+version: '2'
+volumes:
+  resin-data:
+services:
+  datacapture:
+    restart: always
+    build: ./datacapture
+    privileged: true
+    ports:
+      - "80:8080"
+  flightradar24:
+    restart: always
+    build: ./flightradar24
+    ports:
+      - "8754:8754"
+    depends_on:
+      - datacapture
+  flightaware:
+    restart: always
+    build: ./flightaware
+    depends_on:
+      - datacapture
+  radarbox:
+    restart: always
+    build: ./radarbox
+    depends_on:
+      - datacapture
