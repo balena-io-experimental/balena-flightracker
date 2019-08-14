@@ -1,3 +1,5 @@
+# This project is archived - a maintained replacement is here: https://github.com/ketilmo/balena-ads-b
+
 # balena-flightracker
 This is a project designed to simplify the setup of capturing and feeding aircraft location data to various sites. All the sites I have found so far offer premium membership packages in return for your data so for the most part it is cheaper to setup your own receiver and feed data than it is to just sign up for the memership package.
 
